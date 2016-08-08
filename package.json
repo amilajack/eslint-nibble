@@ -1,5 +1,5 @@
 {
-  "name": "eslint-nibble",
+  "name": "eslint-nibble-ignore",
   "version": "3.0.0",
   "description": "Ease into ESLint, by fixing one rule at a time",
   "main": "index.js",
