@@ -50,20 +50,6 @@ let cli = {
         // Show summary
         let summary = nibbler.getFormattedResults(report, fmt.summary);
         console.log(summary);
-
-        // Ask user for rule to narrow in on
-        inquirer.prompt([{
-          name   : 'rule',
-          type   : 'input',
-          message: 'Type in the rule you want to focus on'
-        }])
-          .then(function gotInput(answers) {
-            // Display detailed error reports
-            let ruleName = answers.rule;
-            let ruleResults = nibbler.getRuleResults(report, ruleName);
-            let detailed = nibbler.getFormattedResults(ruleResults, fmt.detailed);
-            console.log(detailed);
-          });
       // No report or not any errors or warnings
       } else {
         console.log(chalk.green('Great job, all lint rules passed.'));
